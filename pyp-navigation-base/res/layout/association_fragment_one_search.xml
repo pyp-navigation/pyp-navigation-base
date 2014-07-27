@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 社团模块 - 第一个页面 - 社团列表 - 搜索栏 （已经去掉了，被注释部分）-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+    <!-- android:background="@drawable/association_main_searchbar_bg" -->
+    
+
+    <!-- 
+    <EditText
+        android:id="@+id/association_main_searchbar_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/association_main_searchbar_edit"
+        android:drawableLeft="@drawable/association_main_searchbar_icon_normal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="搜索a"
+        android:singleLine="true"
+        android:textColor="#000" >
+    </EditText>
+	-->
+	
+	
+</LinearLayout>

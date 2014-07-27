@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dip"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="-3dip"
+    android:layout_marginRight="-3dip"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/tab_title"
+        style="@style/association_search_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp" 
+        android:gravity="center"
+        android:paddingTop="2.0dip"
+        android:textSize="17.0sp"
+        android:textColor="#000000"
+        android:drawableBottom="@drawable/association_search_tab_bottom"/>
+
+
+    <ImageView
+        android:id="@+id/tab_title_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tab_title"
+        android:src="@drawable/association_main_tips_small"
+        android:scaleType="fitEnd"
+        android:gravity="center"
+        android:visibility="gone" />
+    
+</RelativeLayout>

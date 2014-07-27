@@ -1,0 +1,50 @@
+<pyp.navigation.association.detail.DashboardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#f8f9fe" >
+    
+	<!--  News Feed Button -->
+    <Button
+        android:id="@+id/association_info_btn_news_feed"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/association_info_btn_newsfeed"
+        android:text="News Feed" />
+    
+	<!--  Friends Button -->
+    <Button
+        android:id="@+id/association_info_btn_friends"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/association_info_btn_friends"
+        android:text="Friends" />
+    
+	<!--  Messages Button -->
+    <Button
+        android:id="@+id/association_info_btn_messages"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/association_info_btn_messages"
+        android:text="Messages" />
+	
+    <!--  Places Button -->
+    <Button
+        android:id="@+id/association_info_btn_places"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/association_info_btn_places"
+        android:text="Places" />
+
+    <!--  Events Button -->
+    <Button
+        android:id="@+id/association_info_btn_events"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/association_info_btn_events"
+        android:text="Events" />
+
+    <!--  Photos Button -->
+    <Button
+        android:id="@+id/association_info_btn_photos"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/association_info_btn_photos"
+        android:text="Photos" />
+
+</pyp.navigation.association.detail.DashboardLayout>

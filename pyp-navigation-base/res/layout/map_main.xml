@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/map_main_titleView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#373d46" >
+
+        <View
+            android:id="@+id/map_main_belowheaderline"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/map_main_topbar"
+            android:layout_marginBottom="15dp"
+            android:background="#49515d" />
+
+        <RelativeLayout
+            android:id="@+id/map_main_searchholder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map_main_belowheaderline" >
+
+            <ImageView
+                android:id="@+id/map_main_searchbk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/map_searchbk" />
+
+            <EditText
+                android:id="@+id/map_main_search"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/map_main_searchbk"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/map_main_searchBtn"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="I&apos;m looking for..."
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="#69b8d4" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/map_main_searchBtn"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/map_main_searchbk"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/map_searchicon" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/map_main_belowhelpmefindline"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/map_main_searchholder"
+            android:layout_marginTop="10dp"
+            android:background="#49515d" />
+
+        <FrameLayout
+            android:id="@+id/map_tilesView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/map_main_belowhelpmefindline"
+            android:orientation="vertical" >
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/map_main_topbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/map_main_sliderbtn"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:src="@drawable/map_menu_press" />
+
+            <ImageView
+                android:id="@+id/map_main_searchIcon"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/map_searchicon" />
+
+            <ImageView
+                android:id="@+id/map_main_bus"
+                android:layout_width="32dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/map_main_sliderbtn"
+                android:src="@drawable/map_bus" />
+
+            <ImageView
+                android:id="@+id/map_main_WC"
+                android:layout_width="32dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/map_main_bus"
+                android:src="@drawable/map_wc" />
+
+            <ImageView
+                android:id="@+id/map_main_mess"
+                android:layout_width="32dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/map_main_teachFloor"
+                android:src="@drawable/map_mess" />
+
+            <ImageView
+                android:id="@+id/imap_main_place"
+                android:layout_width="32dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/map_main_mess"
+                android:src="@drawable/map_place" />
+
+            <ImageView
+                android:id="@+id/map_main_teachFloor"
+                android:layout_width="32dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/map_main_WC"
+                android:src="@drawable/map_teachfloor" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/map_location_staticMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/map_location" />
+
+    </LinearLayout>
+
+ </RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+         <item name="android:homeAsUpIndicator" tools:targetApi="11">@drawable/main_new_indicator</item>
+        <item name="homeAsUpIndicator">@drawable/main_new_indicator</item>
+    </style>
+    
+    
+    <!-- 原本的UI -->
+      <style name="main_fragment_text">
+        <item name="android:textColor">#ffacacac</item>
+        <item name="android:textSize">25sp</item>
+	</style>
+    <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textSize" tools:ignore="SpUsage">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff29549f</item>
+        <item name="android:background">@null</item>
+    </style>    
+   
+   <style name="association_info_layout_actionbar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/association_info_actionbar_background</item>
+   </style>
+   <style name="association_info_layout_footerBar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">#dedede</item>
+    </style>   
+    
+       <style name="association_search_tab_select">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:drawableBottom">@drawable/association_search_tab_bottom_select</item>
+    </style>
+    <style name="association_search_result_ly">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="association_search_tab">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">#ff008000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:drawableBottom">@drawable/association_search_tab_bottom</item>
+    </style>
+    <style name="association_search_btn_drug_type">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+    <style name="association_search_gv_drug_type">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/association_search_gv</item>
+        <item name="android:listSelector">@null</item>
+        <item name="android:horizontalSpacing">0.0dip</item>
+        <item name="android:verticalSpacing">0.0dip</item>
+    </style>
+    
+    
+    <!-- ViewPage+frgamnet -->
+    
+    <style name="MyWidget" parent="@android:style/Theme" />
+    <style name="MyWidget.TabText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/association_tab_indicator_text</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+    </style>
+    <style name="MyWidget.ListView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:cacheColorHint">#00ffffff</item>
+        <item name="android:dividerHeight" tools:ignore="PxUsage">2px</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:fadeScrollbars">true</item>
+    </style>
+        <style name="search_tab">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">#ffbbbbbb</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:drawableBottom">@drawable/association_search_tab_bottom</item>
+    </style>
+    <style name="search_tab_select">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <item name="android:drawableBottom">@drawable/association_search_tab_bottom_select</item>
+    </style>
+    <style name="styleName">
+        <item name="android:contentDescription">@string/home_under_descript</item>
+    </style>
+</resources>

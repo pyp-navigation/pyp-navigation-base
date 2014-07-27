@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 社团模块 - 第一个页面 - 社团列表 - （列表，滚动条）-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:background="@android:color/white">
+     
+    <!-- 列表 -->
+    <ListView
+        android:id="@+id/association_main_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fastScrollEnabled="true"
+        android:divider="@null" />
+
+    <!-- 滚动条 -->
+    <pyp.navigation.association.one.SideBar
+        android:id="@+id/association_main_sideBar"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical" 
+        android:layout_alignParentRight="true"
+        android:background="#FFFFFF"
+        android:alpha="0.5"/>
+
+</RelativeLayout>

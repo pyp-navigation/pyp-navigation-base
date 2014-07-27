@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 社团模块 - 第一个页面 - 社团列表 - 滚动条的提示框-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="50sp"
+    android:textColor="@android:color/white"
+    android:minWidth="55dip"
+    android:maxWidth="60dip"
+    android:minHeight="50dip"
+    android:maxHeight="50dip"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/association_fragment_one_toast_bg"
+/>

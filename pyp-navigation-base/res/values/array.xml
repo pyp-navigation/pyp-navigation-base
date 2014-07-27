@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu_left_item">
+        <item>主页</item>
+        <item>社团</item>
+        <item>地图</item>
+        <item>课程表</item>
+        <item>退出程序</item>
+    </string-array>
+    
+    <string-array name="menu_right_item">
+        <item>设置</item>
+        <item>测试</item>
+    </string-array>
+
+</resources>
