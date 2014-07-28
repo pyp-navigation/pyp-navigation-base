@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- 所有页面菜单栏背景颜色 -->
+    <!-- 旧菜单栏背景颜色 -->
     <color name="all_bg_color">#2BB8AA</color>
+    
+    <!-- ActionBar 背景 -->
+    <color name="main_actionbar_bgcolor">#336699</color>
+    
+    <!-- 仿天天动听的菜单栏 -->
+    <color name="main_slidingmenu_background">#336699</color>
+    <color name="main_slidingmenu_head_text_color">#ffffffff</color>
+    <color name="main_slidingmenu_bottom_exit_text_color">#ffffffff</color>
+    
     
     <drawable name="transparent">#00000000</drawable>
 
@@ -28,4 +37,10 @@
     <color name="tab_indicator_text_unselected">#aac5d7</color>
     <color name="page_viewer_margin_color">#007800</color>
 
+
+    
+
+    
 </resources>
+
+
