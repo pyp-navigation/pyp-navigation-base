@@ -4,6 +4,7 @@ import pyp.navigation.R;
 import pyp.navigation.association.AssociationFragment;
 import pyp.navigation.home.HomeFragment;
 import pyp.navigation.map.MapFragment;
+import pyp.navigation.schedule.ScheduleFragment;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,7 +20,7 @@ import android.widget.Toast;
 public class LeftMenuFragment extends ListFragment {
 
 	private MainActivity parentActivity;
-	
+
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
@@ -27,21 +28,24 @@ public class LeftMenuFragment extends ListFragment {
 	}
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.main_list, null);
 	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		
-		String[] menu_left_items = getResources().getStringArray(R.array.menu_left_item);
-		
-		ArrayAdapter<String> menu_left_adapter = new ArrayAdapter<String>(getActivity(), 
-				R.layout.main_menu_list_item, android.R.id.text1, menu_left_items);
-		
+
+		String[] menu_left_items = getResources().getStringArray(
+				R.array.menu_left_item);
+
+		ArrayAdapter<String> menu_left_adapter = new ArrayAdapter<String>(
+				getActivity(), R.layout.main_menu_list_item,
+				android.R.id.text1, menu_left_items);
+
 		setListAdapter(menu_left_adapter);
-		
+
 	}
 
 	@Override
@@ -61,7 +65,7 @@ public class LeftMenuFragment extends ListFragment {
 			break;
 		case 3:
 			Log.i("qsuron", "课程表");
-			Toast.makeText(this.getActivity(), "课程表开发中", Toast.LENGTH_SHORT).show();
+			parentActivity.changeFragment(ScheduleFragment.class.getName());
 			break;
 		case 4:
 			Log.i("qsuron", "退出程序");
@@ -71,6 +75,5 @@ public class LeftMenuFragment extends ListFragment {
 			Log.i("qsuron", "default");
 		}
 	}
-
 
 }

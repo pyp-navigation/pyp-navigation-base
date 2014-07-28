@@ -35,5 +35,7 @@
     <dimen name="common_text_size_small_2">10dp</dimen>
     <dimen name="common_text_size_small_3">12dp</dimen>
     <dimen name="page_margin_width">12dp</dimen>
+    <dimen name="schedule_page_margin_width">2dp</dimen>
+    
     
 </resources>

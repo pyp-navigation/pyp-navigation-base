@@ -27,5 +27,6 @@
     <color name="tab_indicator_text_selected">#3a8bc1</color>
     <color name="tab_indicator_text_unselected">#aac5d7</color>
     <color name="page_viewer_margin_color">#007800</color>
+    <color name="schedule_page_viewer_margin_color">#ff7800</color>
 
 </resources>
