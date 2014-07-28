@@ -9,8 +9,13 @@ package pyp.navigation;
 
 public final class R {
     public static final class array {
-        public static final int menu_left_item=0x7f0b0000;
-        public static final int menu_right_item=0x7f0b0001;
+        /**  左菜单栏 - 图标 
+         */
+        public static final int menu_left_item_icon=0x7f0b0001;
+        /**  左菜单栏 - 标题 
+         */
+        public static final int menu_left_item_title=0x7f0b0000;
+        public static final int menu_right_item=0x7f0b0002;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -878,41 +883,49 @@ containing a value of this type.
         public static final int abs__bright_foreground_disabled_holo_light=0x7f060005;
         public static final int abs__bright_foreground_holo_dark=0x7f060002;
         public static final int abs__bright_foreground_holo_light=0x7f060003;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f060016;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f060017;
-        public static final int abs__primary_text_holo_dark=0x7f060018;
-        public static final int abs__primary_text_holo_light=0x7f060019;
-        /**  所有页面菜单栏背景颜色 
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f06001a;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f06001b;
+        public static final int abs__primary_text_holo_dark=0x7f06001c;
+        public static final int abs__primary_text_holo_light=0x7f06001d;
+        /**  旧菜单栏背景颜色 
          */
         public static final int all_bg_color=0x7f060006;
-        public static final int association_tab_indicator_text=0x7f06001a;
+        public static final int association_tab_indicator_text=0x7f06001e;
         /**  For suggestions 
          */
-        public static final int common_blue=0x7f060012;
+        public static final int common_blue=0x7f060016;
         /**  For main texts 
          */
-        public static final int common_dark=0x7f06000a;
-        public static final int common_dark_disabled=0x7f06000c;
-        public static final int common_dark_shadow=0x7f06000b;
+        public static final int common_dark=0x7f06000e;
+        public static final int common_dark_disabled=0x7f060010;
+        public static final int common_dark_shadow=0x7f06000f;
         /**  For safe cases 
          */
-        public static final int common_green=0x7f060011;
+        public static final int common_green=0x7f060015;
         /**  For secondary texts 
          */
-        public static final int common_grey=0x7f06000d;
-        public static final int common_grey_disabled=0x7f06000e;
+        public static final int common_grey=0x7f060011;
+        public static final int common_grey_disabled=0x7f060012;
         /**  For danger cases, such as virus, file delete... 
          */
-        public static final int common_red=0x7f06000f;
-        public static final int common_white=0x7f060007;
-        public static final int common_white_disabled=0x7f060009;
-        public static final int common_white_shadow=0x7f060008;
+        public static final int common_red=0x7f060013;
+        public static final int common_white=0x7f06000b;
+        public static final int common_white_disabled=0x7f06000d;
+        public static final int common_white_shadow=0x7f06000c;
         /**  For warning cases, such as trashes... 
          */
-        public static final int common_yellow=0x7f060010;
-        public static final int page_viewer_margin_color=0x7f060015;
-        public static final int tab_indicator_text_selected=0x7f060013;
-        public static final int tab_indicator_text_unselected=0x7f060014;
+        public static final int common_yellow=0x7f060014;
+        /**  ActionBar 背景 
+         */
+        public static final int main_actionbar_bgcolor=0x7f060007;
+        /**  仿天天动听的菜单栏 
+         */
+        public static final int main_slidingmenu_background=0x7f060008;
+        public static final int main_slidingmenu_bottom_exit_text_color=0x7f06000a;
+        public static final int main_slidingmenu_head_text_color=0x7f060009;
+        public static final int page_viewer_margin_color=0x7f060019;
+        public static final int tab_indicator_text_selected=0x7f060017;
+        public static final int tab_indicator_text_unselected=0x7f060018;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -1027,9 +1040,19 @@ containing a value of this type.
         public static final int common_text_size_small=0x7f070017;
         public static final int common_text_size_small_2=0x7f070018;
         public static final int common_text_size_small_3=0x7f070019;
+        /**  actionbar 
+         */
+        public static final int frag_rounding_radius=0x7f07001b;
         public static final int list_padding=0x7f070010;
+        /**  仿天天动听的菜单栏 
+         */
+        public static final int main_slidingmenu_head_avatarframe_height=0x7f07001d;
+        public static final int main_slidingmenu_head_avatarframe_width=0x7f07001e;
         public static final int page_margin_width=0x7f07001a;
+        public static final int progress_action_padding=0x7f07001c;
         public static final int shadow_width=0x7f070011;
+        /**  菜单弹出的距离 默认是60
+         */
         public static final int slidingmenu_offset=0x7f07000f;
     }
     public static final class drawable {
@@ -1296,35 +1319,51 @@ containing a value of this type.
         public static final int home_titlebar_menu_on=0x7f020104;
         public static final int home_titlebar_menu_selector=0x7f020105;
         public static final int ic_launcher=0x7f020106;
-        public static final int indicator=0x7f020107;
-        public static final int main_new_indicator=0x7f020108;
-        public static final int main_shadow=0x7f020109;
-        public static final int main_shadowright=0x7f02010a;
-        public static final int map_bus=0x7f02010b;
-        public static final int map_headeraroundme=0x7f02010c;
-        public static final int map_headeraroundme_press=0x7f02010d;
-        public static final int map_headeraroundmepressed=0x7f02010e;
-        public static final int map_headerfavourites=0x7f02010f;
-        public static final int map_headerfavourites_press=0x7f020110;
-        public static final int map_headerfavouritespressed=0x7f020111;
-        public static final int map_location=0x7f020112;
-        public static final int map_marker_blue=0x7f020113;
-        public static final int map_marker_green=0x7f020114;
-        public static final int map_marker_lightblue=0x7f020115;
-        public static final int map_marker_orange=0x7f020116;
-        public static final int map_marker_purple=0x7f020117;
-        public static final int map_menu=0x7f020118;
-        public static final int map_menu_press=0x7f020119;
-        public static final int map_menubk=0x7f02011a;
-        public static final int map_menupressed=0x7f02011b;
-        public static final int map_mess=0x7f02011c;
-        public static final int map_place=0x7f02011d;
-        public static final int map_position=0x7f02011e;
-        public static final int map_searchbk=0x7f02011f;
-        public static final int map_searchicon=0x7f020120;
-        public static final int map_teachfloor=0x7f020121;
-        public static final int map_wc=0x7f020122;
-        public static final int transparent=0x7f020123;
+        public static final int ic_menu_refresh_holo_light=0x7f020107;
+        public static final int ic_menu_star_holo_light=0x7f020108;
+        public static final int icon_alarm=0x7f020109;
+        public static final int icon_audio=0x7f02010a;
+        public static final int icon_clock=0x7f02010b;
+        public static final int icon_home=0x7f02010c;
+        public static final int icon_ktv=0x7f02010d;
+        public static final int icon_pic=0x7f02010e;
+        public static final int icon_plane=0x7f02010f;
+        public static final int icon_search=0x7f020110;
+        public static final int icon_setting=0x7f020111;
+        public static final int icon_theme=0x7f020112;
+        public static final int icon_traffic=0x7f020113;
+        public static final int indicator=0x7f020114;
+        public static final int main_new_indicator=0x7f020115;
+        public static final int main_shadow=0x7f020116;
+        public static final int main_shadowright=0x7f020117;
+        public static final int main_slidingmenu_bottom_exit_bg=0x7f020118;
+        public static final int main_slidingmenu_gridview_background=0x7f020119;
+        public static final int main_slidingmenu_head_avatar_default=0x7f02011a;
+        public static final int map_bus=0x7f02011b;
+        public static final int map_headeraroundme=0x7f02011c;
+        public static final int map_headeraroundme_press=0x7f02011d;
+        public static final int map_headeraroundmepressed=0x7f02011e;
+        public static final int map_headerfavourites=0x7f02011f;
+        public static final int map_headerfavourites_press=0x7f020120;
+        public static final int map_headerfavouritespressed=0x7f020121;
+        public static final int map_location=0x7f020122;
+        public static final int map_marker_blue=0x7f020123;
+        public static final int map_marker_green=0x7f020124;
+        public static final int map_marker_lightblue=0x7f020125;
+        public static final int map_marker_orange=0x7f020126;
+        public static final int map_marker_purple=0x7f020127;
+        public static final int map_menu=0x7f020128;
+        public static final int map_menu_press=0x7f020129;
+        public static final int map_menubk=0x7f02012a;
+        public static final int map_menupressed=0x7f02012b;
+        public static final int map_mess=0x7f02012c;
+        public static final int map_place=0x7f02012d;
+        public static final int map_position=0x7f02012e;
+        public static final int map_searchbk=0x7f02012f;
+        public static final int map_searchicon=0x7f020130;
+        public static final int map_teachfloor=0x7f020131;
+        public static final int map_wc=0x7f020132;
+        public static final int transparent=0x7f020133;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f040028;
@@ -1392,12 +1431,12 @@ containing a value of this type.
         public static final int association_main_sideBar=0x7f04003b;
         public static final int association_search_menu=0x7f04004e;
         public static final int association_search_type_et=0x7f040050;
-        public static final int behind_width=0x7f04007d;
+        public static final int behind_width=0x7f040088;
         public static final int content_frame=0x7f04005d;
         public static final int disableHome=0x7f040009;
         public static final int edit_query=0x7f04002e;
-        public static final int fade_degree=0x7f040081;
-        public static final int fade_enabled=0x7f040080;
+        public static final int fade_degree=0x7f04008c;
+        public static final int fade_enabled=0x7f04008b;
         public static final int fullscreen=0x7f040013;
         public static final int heardLeftIcon=0x7f04004d;
         public static final int homeAsUp=0x7f040006;
@@ -1409,31 +1448,57 @@ containing a value of this type.
         public static final int home_titlebar=0x7f040055;
         public static final int home_titlebar_left_menu=0x7f040056;
         public static final int home_titlebar_right_menu=0x7f040057;
-        public static final int imap_main_place=0x7f040071;
+        public static final int imap_main_place=0x7f04007c;
         public static final int left=0x7f040010;
-        public static final int left_right=0x7f040074;
+        public static final int left_right=0x7f04007f;
         public static final int listMode=0x7f040002;
+        public static final int main_slidingmenu=0x7f040062;
+        public static final int main_slidingmenu_bottom_exit=0x7f040066;
+        public static final int main_slidingmenu_gridview=0x7f040067;
+        public static final int main_slidingmenu_gridview_item_image=0x7f040068;
+        public static final int main_slidingmenu_gridview_item_text=0x7f040069;
+        public static final int main_slidingmenu_gridview_view=0x7f040065;
+        public static final int main_slidingmenu_head_avatarframe=0x7f040063;
+        public static final int main_slidingmenu_head_avatarframe_avatar=0x7f04006b;
+        public static final int main_slidingmenu_head_avatarframe_frame=0x7f04006a;
+        public static final int main_slidingmenu_head_avatarframe_mask=0x7f04006c;
+        public static final int main_slidingmenu_head_nick=0x7f040064;
         public static final int main_titlebar=0x7f040047;
-        public static final int map_location_staticMap=0x7f040072;
-        public static final int map_main_WC=0x7f04006e;
-        public static final int map_main_belowheaderline=0x7f040063;
-        public static final int map_main_belowhelpmefindline=0x7f040069;
-        public static final int map_main_bus=0x7f04006d;
-        public static final int map_main_mess=0x7f04006f;
-        public static final int map_main_search=0x7f040067;
-        public static final int map_main_searchBtn=0x7f040068;
-        public static final int map_main_searchIcon=0x7f04006c;
-        public static final int map_main_searchbk=0x7f040066;
-        public static final int map_main_searchholder=0x7f040065;
-        public static final int map_main_sliderbtn=0x7f04006b;
-        public static final int map_main_teachFloor=0x7f040070;
-        public static final int map_main_titleView=0x7f040062;
-        public static final int map_main_topbar=0x7f040064;
-        public static final int map_tilesView=0x7f04006a;
+        public static final int map_location_staticMap=0x7f04007d;
+        public static final int map_main_WC=0x7f040079;
+        public static final int map_main_belowheaderline=0x7f04006e;
+        public static final int map_main_belowhelpmefindline=0x7f040074;
+        public static final int map_main_bus=0x7f040078;
+        public static final int map_main_mess=0x7f04007a;
+        public static final int map_main_search=0x7f040072;
+        public static final int map_main_searchBtn=0x7f040073;
+        public static final int map_main_searchIcon=0x7f040077;
+        public static final int map_main_searchbk=0x7f040071;
+        public static final int map_main_searchholder=0x7f040070;
+        public static final int map_main_sliderbtn=0x7f040076;
+        public static final int map_main_teachFloor=0x7f04007b;
+        public static final int map_main_titleView=0x7f04006d;
+        public static final int map_main_topbar=0x7f04006f;
+        public static final int map_tilesView=0x7f040075;
         public static final int margin=0x7f040012;
+        public static final int menu_bak=0x7f040099;
+        public static final int menu_bak_gradient=0x7f04009c;
+        public static final int menu_bak_group=0x7f04009a;
+        public static final int menu_bak_none=0x7f04009b;
+        public static final int menu_both=0x7f040090;
         public static final int menu_frame=0x7f04005e;
         public static final int menu_frame_two=0x7f04005f;
-        public static final int mode=0x7f040073;
+        public static final int menu_logo=0x7f040092;
+        public static final int menu_nav=0x7f040094;
+        public static final int menu_nav_drop_down=0x7f040097;
+        public static final int menu_nav_group=0x7f040095;
+        public static final int menu_nav_label=0x7f040098;
+        public static final int menu_nav_tabs=0x7f040096;
+        public static final int menu_refresh=0x7f04008f;
+        public static final int menu_search=0x7f04008e;
+        public static final int menu_text=0x7f040091;
+        public static final int menu_up=0x7f040093;
+        public static final int mode=0x7f04007e;
         public static final int none=0x7f040014;
         public static final int normal=0x7f040001;
         public static final int pager=0x7f040052;
@@ -1441,25 +1506,25 @@ containing a value of this type.
         public static final int right=0x7f040011;
         public static final int row_icon=0x7f040060;
         public static final int row_title=0x7f040061;
-        public static final int scroll_scale=0x7f04007c;
+        public static final int scroll_scale=0x7f040087;
         public static final int searchMainHeardLayout=0x7f04004c;
         public static final int selected_view=0x7f040015;
-        public static final int shadow_enabled=0x7f04007e;
-        public static final int shadow_width=0x7f04007f;
+        public static final int shadow_enabled=0x7f040089;
+        public static final int shadow_width=0x7f04008a;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
-        public static final int slidingmenumain=0x7f040082;
+        public static final int slidingmenumain=0x7f04008d;
         public static final int tabMode=0x7f040003;
         public static final int tab_title=0x7f040053;
         public static final int tab_title_tips=0x7f040054;
-        public static final int touch_above=0x7f040075;
-        public static final int touch_above_full=0x7f040076;
-        public static final int touch_above_margin=0x7f040077;
-        public static final int touch_above_none=0x7f040078;
-        public static final int touch_behind=0x7f040079;
-        public static final int touch_behind_full=0x7f04007a;
-        public static final int touch_behind_margin=0x7f04007b;
+        public static final int touch_above=0x7f040080;
+        public static final int touch_above_full=0x7f040081;
+        public static final int touch_above_margin=0x7f040082;
+        public static final int touch_above_none=0x7f040083;
+        public static final int touch_behind=0x7f040084;
+        public static final int touch_behind_full=0x7f040085;
+        public static final int touch_behind_margin=0x7f040086;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -1513,11 +1578,18 @@ containing a value of this type.
         public static final int main_menu_frame_two=0x7f03002a;
         public static final int main_menu_list_item=0x7f03002b;
         public static final int main_row=0x7f03002c;
-        public static final int map_main=0x7f03002d;
-        public static final int setting=0x7f03002e;
-        public static final int sherlock_spinner_dropdown_item=0x7f03002f;
-        public static final int sherlock_spinner_item=0x7f030030;
-        public static final int slidingmenumain=0x7f030031;
+        public static final int main_slidingmenu=0x7f03002d;
+        public static final int main_slidingmenu_gridview=0x7f03002e;
+        public static final int main_slidingmenu_gridview_item=0x7f03002f;
+        public static final int main_slidingmenu_head=0x7f030030;
+        public static final int map_main=0x7f030031;
+        public static final int setting=0x7f030032;
+        public static final int sherlock_spinner_dropdown_item=0x7f030033;
+        public static final int sherlock_spinner_item=0x7f030034;
+        public static final int slidingmenumain=0x7f030035;
+    }
+    public static final class menu {
+        public static final int main_menu=0x7f0c0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1570,6 +1642,10 @@ containing a value of this type.
         public static final int home_under_descript=0x7f090027;
         public static final int left=0x7f090010;
         public static final int left_and_right=0x7f090012;
+        public static final int main_slidingmenu_bottom_exit_text=0x7f09002a;
+        /**  仿天天动听的菜单栏 
+         */
+        public static final int main_slidingmenu_head_text=0x7f090029;
         public static final int right=0x7f090011;
         public static final int setting_actionbar_behind_width=0x7f090022;
         public static final int setting_actionbar_scroll=0x7f090021;
