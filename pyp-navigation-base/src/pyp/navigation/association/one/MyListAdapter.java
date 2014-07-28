@@ -106,7 +106,7 @@ public class MyListAdapter extends BaseAdapter implements SectionIndexer {
 
 		// 方式2：getIdentifier
 		int resId = mContext.getResources().getIdentifier(pic, "drawable",
-				"pyp.navigation.main");
+				"pyp.navigation");
 		// 找不到资源就设置为默认logo
 		if (resId == 0)
 			resId = R.drawable.association_logo_0;

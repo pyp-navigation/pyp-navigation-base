@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="menu_left_item">
+    <!-- 左菜单栏 - 标题 -->
+    <string-array name="menu_left_item_title">
         <item>主页</item>
         <item>社团</item>
         <item>地图</item>
         <item>课程表</item>
-        <item>退出程序</item>
+        <item>测试</item>
+        <item>测试</item>
+        <item>测试</item>
+        <item>测试</item>
+        <item>测试</item>
+        <item>测试</item>
+        <item>测试</item>
     </string-array>
     
+    <!-- 左菜单栏 - 图标 -->
+    <string-array name="menu_left_item_icon">
+        <item>icon_home</item>
+        <item>icon_plane</item>
+        <item>icon_traffic</item>
+        <item>icon_audio</item>
+        <item>icon_alarm</item>
+        <item>icon_alarm</item>
+        <item>icon_alarm</item>
+        <item>icon_alarm</item>
+        <item>icon_alarm</item>
+        <item>icon_alarm</item>
+        <item>icon_alarm</item>
+    </string-array>
+    
+        
     <string-array name="menu_right_item">
         <item>设置</item>
         <item>测试</item>
