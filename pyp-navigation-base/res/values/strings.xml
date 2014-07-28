@@ -40,4 +40,15 @@
     <string name="setting_mode">菜单模式</string>
     <string name="home_under_descript">主页页面下方区域</string>
     <string name="association_main_desc1">左导航按钮</string>
+    
+	<!-- 仿天天动听的菜单栏 -->
+    <string name="main_slidingmenu_head_text">登录/注册</string>
+    <string name="main_slidingmenu_bottom_exit_text">退出程序</string>
+    
+    
+    
+    
 </resources>
+
+
+

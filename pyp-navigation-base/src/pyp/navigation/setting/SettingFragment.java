@@ -4,7 +4,7 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 import pyp.navigation.R;
 import pyp.navigation.main.MainActivity;
-import pyp.navigation.main.RightMenuFragment;
+import pyp.navigation.main.menu.RightMenuFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
