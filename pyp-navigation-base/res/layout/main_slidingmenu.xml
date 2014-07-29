@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_slidingmenu"
+    android:background="@color/main_slidingmenu_background"
+    android:layout_width="220.0dip"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <pyp.navigation.main.menu.SlidmenuAvatarFrameView
+        android:id="@+id/main_slidingmenu_head_avatarframe"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip" />
+
+    <TextView
+        android:id="@+id/main_slidingmenu_head_nick"
+        android:text="@string/main_slidingmenu_head_text"
+        android:textColor="@color/main_slidingmenu_head_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="4.0dip"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:minHeight="20.0dip"
+        android:singleLine="true"
+        android:textSize="20.0sp" />
+
+    <pyp.navigation.main.menu.SlidmenuGridView
+        android:id="@+id/main_slidingmenu_gridview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <TextView
+        android:id="@+id/main_slidingmenu_bottom_exit"
+        android:text="@string/main_slidingmenu_bottom_exit_text"
+        android:textColor="@color/main_slidingmenu_bottom_exit_text_color"
+        android:background="@drawable/main_slidingmenu_bottom_exit_bg"
+        android:layout_width="138.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24.0dip"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center"
+        android:minHeight="40.0dip"
+        android:textSize="18.0sp" />
+
+</LinearLayout>
