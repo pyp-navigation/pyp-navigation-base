@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <GridView
+        android:id="@+id/main_slidingmenu_gridview"
+        android:listSelector="@drawable/main_slidingmenu_gridview_background"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:gravity="center"
+        android:horizontalSpacing="8.0dip"
+        android:numColumns="2"
+        android:scrollbars="none" />
+
+</merge>
