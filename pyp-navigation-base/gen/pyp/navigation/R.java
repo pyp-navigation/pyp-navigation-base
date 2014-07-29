@@ -1432,11 +1432,14 @@ containing a value of this type.
         public static final int association_search_menu=0x7f04004e;
         public static final int association_search_type_et=0x7f040050;
         public static final int behind_width=0x7f040088;
+        public static final int but=0x7f040090;
         public static final int content_frame=0x7f04005d;
         public static final int disableHome=0x7f040009;
+        public static final int edit=0x7f04008f;
         public static final int edit_query=0x7f04002e;
         public static final int fade_degree=0x7f04008c;
         public static final int fade_enabled=0x7f04008b;
+        public static final int female=0x7f040096;
         public static final int fullscreen=0x7f040013;
         public static final int heardLeftIcon=0x7f04004d;
         public static final int homeAsUp=0x7f040006;
@@ -1464,6 +1467,7 @@ containing a value of this type.
         public static final int main_slidingmenu_head_avatarframe_mask=0x7f04006c;
         public static final int main_slidingmenu_head_nick=0x7f040064;
         public static final int main_titlebar=0x7f040047;
+        public static final int male=0x7f040095;
         public static final int map_location_staticMap=0x7f04007d;
         public static final int map_main_WC=0x7f040079;
         public static final int map_main_belowheaderline=0x7f04006e;
@@ -1481,24 +1485,25 @@ containing a value of this type.
         public static final int map_main_topbar=0x7f04006f;
         public static final int map_tilesView=0x7f040075;
         public static final int margin=0x7f040012;
-        public static final int menu_bak=0x7f040099;
-        public static final int menu_bak_gradient=0x7f04009c;
-        public static final int menu_bak_group=0x7f04009a;
-        public static final int menu_bak_none=0x7f04009b;
-        public static final int menu_both=0x7f040090;
+        public static final int menu_bak=0x7f0400a2;
+        public static final int menu_bak_gradient=0x7f0400a5;
+        public static final int menu_bak_group=0x7f0400a3;
+        public static final int menu_bak_none=0x7f0400a4;
+        public static final int menu_both=0x7f040099;
         public static final int menu_frame=0x7f04005e;
         public static final int menu_frame_two=0x7f04005f;
-        public static final int menu_logo=0x7f040092;
-        public static final int menu_nav=0x7f040094;
-        public static final int menu_nav_drop_down=0x7f040097;
-        public static final int menu_nav_group=0x7f040095;
-        public static final int menu_nav_label=0x7f040098;
-        public static final int menu_nav_tabs=0x7f040096;
-        public static final int menu_refresh=0x7f04008f;
-        public static final int menu_search=0x7f04008e;
-        public static final int menu_text=0x7f040091;
-        public static final int menu_up=0x7f040093;
+        public static final int menu_logo=0x7f04009b;
+        public static final int menu_nav=0x7f04009d;
+        public static final int menu_nav_drop_down=0x7f0400a0;
+        public static final int menu_nav_group=0x7f04009e;
+        public static final int menu_nav_label=0x7f0400a1;
+        public static final int menu_nav_tabs=0x7f04009f;
+        public static final int menu_refresh=0x7f040098;
+        public static final int menu_search=0x7f040097;
+        public static final int menu_text=0x7f04009a;
+        public static final int menu_up=0x7f04009c;
         public static final int mode=0x7f04007e;
+        public static final int myAnalogClock=0x7f040092;
         public static final int none=0x7f040014;
         public static final int normal=0x7f040001;
         public static final int pager=0x7f040052;
@@ -1509,6 +1514,7 @@ containing a value of this type.
         public static final int scroll_scale=0x7f040087;
         public static final int searchMainHeardLayout=0x7f04004c;
         public static final int selected_view=0x7f040015;
+        public static final int sex=0x7f040094;
         public static final int shadow_enabled=0x7f040089;
         public static final int shadow_width=0x7f04008a;
         public static final int showCustom=0x7f040008;
@@ -1516,6 +1522,9 @@ containing a value of this type.
         public static final int showTitle=0x7f040007;
         public static final int slidingmenumain=0x7f04008d;
         public static final int tabMode=0x7f040003;
+        public static final int tab_clock=0x7f040091;
+        public static final int tab_edit=0x7f04008e;
+        public static final int tab_sex=0x7f040093;
         public static final int tab_title=0x7f040053;
         public static final int tab_title_tips=0x7f040054;
         public static final int touch_above=0x7f040080;
@@ -1587,6 +1596,7 @@ containing a value of this type.
         public static final int sherlock_spinner_dropdown_item=0x7f030033;
         public static final int sherlock_spinner_item=0x7f030034;
         public static final int slidingmenumain=0x7f030035;
+        public static final int tab=0x7f030036;
     }
     public static final class menu {
         public static final int main_menu=0x7f0c0000;
@@ -1783,7 +1793,13 @@ containing a value of this type.
         public static final int association_search_result_ly=0x7f0a005f;
         public static final int association_search_tab=0x7f0a0060;
         public static final int association_search_tab_select=0x7f0a005e;
-        /**  原本的UI 
+        /**   正常的ActionBar
+    <style name="AppTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:homeAsUpIndicator" tools:targetApi="11">@drawable/main_new_indicator</item>
+        <item name="homeAsUpIndicator">@drawable/main_new_indicator</item>
+    </style>
+	
+ 原本的UI 
          */
         public static final int main_fragment_text=0x7f0a005a;
         public static final int search_tab=0x7f0a0066;
