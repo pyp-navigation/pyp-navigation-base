@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/tab_edit"
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<EditText
+			android:id="@+id/edit" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:text="请输入检索关键字..."
+			android:textSize="18px" />
+		<Button
+			android:id="@+id/but"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="搜索" />
+	</LinearLayout>
+	<LinearLayout 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/tab_clock"
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<AnalogClock
+			android:id="@+id/myAnalogClock" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+	<LinearLayout 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/tab_sex"
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<RadioGroup
+			android:id="@+id/sex" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<RadioButton
+				android:id="@+id/male"
+				android:checked="true"
+				android:text="性别：男" />
+			<RadioButton
+				android:id="@+id/female"
+				android:text="性别：女" />
+		</RadioGroup>
+	</LinearLayout>
+</LinearLayout>

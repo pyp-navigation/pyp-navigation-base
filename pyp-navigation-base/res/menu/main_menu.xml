@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- custom -->
+	<item android:id="@+id/menu_search" android:showAsAction="ifRoom"
+		android:title="搜索" android:actionViewClass="android.widget.SearchView" />
+
+	<!-- icon -->
+	<item android:id="@+id/menu_refresh" android:showAsAction="ifRoom"
+		android:title="刷新" android:icon="@drawable/ic_menu_refresh_holo_light" />
+
+	<!-- icon + text -->
+	<item android:id="@+id/menu_both" android:showAsAction="ifRoom|withText"
+		android:title="BOTH" android:icon="@drawable/ic_menu_star_holo_light" />
+
+	<!-- text -->
+	<item android:id="@+id/menu_text" android:showAsAction="ifRoom"
+		android:title="LABEL" />
+
+	<item android:id="@+id/menu_logo" android:showAsAction="ifRoom"
+		android:checkable="true" android:checked="false" android:title="logo" />
+
+	<item android:id="@+id/menu_up" android:showAsAction="ifRoom"
+		android:checkable="true" android:checked="false" android:title="label_up" />
+
+	<!-- Navigation submenu -->
+	<item android:id="@+id/menu_nav" android:title="SUB">
+		<menu>
+			<group android:id="@+id/menu_nav_group"
+				android:checkableBehavior="single">
+				
+				<item android:id="@+id/menu_nav_tabs" android:title="tabs" android:checked="true" />
+
+				<item android:id="@+id/menu_nav_drop_down" android:title="drop_down" />
+
+				<item android:id="@+id/menu_nav_label" android:title="nav_label" />
+			</group>
+		</menu>
+	</item>
+
+	<!-- action bar background submenu -->
+	<item android:id="@+id/menu_bak" android:title="bak">
+		<menu>
+			<group android:id="@+id/menu_bak_group"
+				android:checkableBehavior="single">
+				
+				<item android:id="@+id/menu_bak_none" android:title="bak_none" android:checked="true" />
+
+				<item android:id="@+id/menu_bak_gradient" android:title="bak_gradient" />
+
+				<!--<item android:id="@+id/menu_bak_9_patch" android:title="@string/action_label_image" />-->
+			</group>
+		</menu>
+	</item>
+
+</menu>
