@@ -37,7 +37,7 @@ import com.qozix.tileview.TileView;
  * @email 531724220@qq.com
  */
 public class MapFragment extends Fragment {
-	//test 
+	//test
 	private MainActivity parentActivity;
 	
 	@Override
