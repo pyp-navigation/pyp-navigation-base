@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/baidumap_style_layer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/map_location_baiduMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/map_baidu_location" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/baidu_near"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/map_baidukicon_nearbtn"
+            android:text="附近"
+            android:textColor="#ff2f2f2f"
+            android:textSize="10.0dip" />
+
+        <Button
+            android:id="@+id/baidu_route"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/map_baiduicon_routebtn"
+            android:text="路线"
+            android:textColor="#ff2f2f2f"
+            android:textSize="10.0dip" />
+
+        <Button
+            android:id="@+id/baidu_navi"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/map_baiduicon_navibtn"
+            android:text="导航"
+            android:textColor="#ff2f2f2f"
+            android:textSize="10.0dip" />
+
+        <Button
+            android:id="@+id/baidu_bus"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/map_baidu_busbtn"
+            android:text="公交"
+            android:textColor="#ff2f2f2f"
+            android:textSize="10.0dip" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/map_baidumap_layyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/map_baidumap_layer_hl" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/map_location_baiduMap"
+        android:layout_alignTop="@+id/map_baidumap_layyer"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/satellite_layerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卫星图"
+            android:textColor="@color/common_red" />
+
+        <Button
+            android:id="@+id/commen_layerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通图"
+            android:textColor="@color/common_red" />
+
+        <CheckBox
+            android:id="@+id/traffic_layerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交通图"
+            android:textColor="@color/common_red"
+            android:textColorHint="@color/common_white_shadow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignTop="@+id/linearLayout1" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="211dp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="在"
+                    android:textColor="@color/common_red" />
+
+                <EditText
+                    android:id="@+id/baidu_poi_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/common_red" >
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="市内找"
+                    android:textColor="@color/common_red" />
+
+                <EditText
+                    android:id="@+id/baidu_poi_target"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/common_red" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/baidu_poi_start"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="开始"
+                    android:textColor="@color/common_red" />
+
+                <Button
+                    android:id="@+id/baidu_poi_nextGroup"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:text="下一组"
+                    android:textColor="@color/common_red" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/linearLayout1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起点: "
+                android:textColor="@color/common_red" />
+
+            <EditText
+                android:id="@+id/baidu_route_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/common_red" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="终点: "
+                android:textColor="@color/common_red" />
+
+            <EditText
+                android:id="@+id/baidu_route_end"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/common_red" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/baidu_route_driveCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="驾车搜索"
+                android:textColor="@color/common_red" />
+
+            <Button
+                android:id="@+id/baidu_route_byBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公交搜索"
+                android:textColor="@color/common_red" />
+
+            <Button
+                android:id="@+id/baidu_route_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="步行搜索"
+                android:textColor="@color/common_red" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

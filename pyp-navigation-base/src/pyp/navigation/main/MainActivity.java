@@ -384,7 +384,7 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 		@Override
 		public void onTabReselected(Tab tab, FragmentTransaction ft) {
 		}
-	    
+
 	    
 	/*****************************************************
 	 *  下面是一些 暂时没用到，可能会有用的代码段

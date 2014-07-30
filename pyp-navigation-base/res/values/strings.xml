@@ -46,6 +46,8 @@
     <string name="main_slidingmenu_bottom_exit_text">退出程序</string>
     
     
+    <!-- POI搜索功能 --> 
+   <string name="baidumap_poi_info">POI搜索功能</string>
     
     
 </resources>
