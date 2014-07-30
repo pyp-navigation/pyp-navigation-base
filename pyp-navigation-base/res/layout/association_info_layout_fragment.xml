@@ -10,21 +10,21 @@
         android:id="@+id/association_info_btn_news_feed"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/association_info_btn_newsfeed"
-        android:text="社团简介" />
+        android:text="News Feed" />
     
 	<!--  Friends Button -->
     <Button
         android:id="@+id/association_info_btn_friends"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/association_info_btn_friends"
-        android:text="社团成员" />
+        android:text="Friends" />
     
 	<!--  Messages Button -->
     <Button
         android:id="@+id/association_info_btn_messages"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/association_info_btn_messages"
-        android:text="社团评论" />
+        android:text="Messages" />
 	
     <!--  Places Button -->
     <Button
@@ -45,6 +45,6 @@
         android:id="@+id/association_info_btn_photos"
         style="@style/DashboardButton"
         android:drawableTop="@drawable/association_info_btn_photos"
-        android:text="社团图片墙" />
+        android:text="Photos" />
 
 </pyp.navigation.association.detail.DashboardLayout>

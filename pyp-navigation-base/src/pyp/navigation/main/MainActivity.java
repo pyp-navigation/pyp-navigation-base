@@ -5,26 +5,18 @@ import pyp.navigation.association.AssociationFragment;
 import pyp.navigation.association.bean.Association;
 import pyp.navigation.association.detail.AssociationDetailFragment;
 import pyp.navigation.home.HomeFragment;
-import pyp.navigation.main.menu.LeftMenuFragment;
-import pyp.navigation.main.menu.RightMenuFragment;
 import pyp.navigation.map.MapFragment;
 import pyp.navigation.setting.SettingFragment;
 import android.graphics.Canvas;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.animation.Interpolator;
+import android.widget.Toast;
 
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.ActionBar.Tab;
-import com.actionbarsherlock.internal.nineoldandroids.animation.ObjectAnimator;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.CanvasTransformer;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
@@ -36,18 +28,17 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
  * @date 2014-7-27
  * @email admin@qiushurong.cn
  */
-public class MainActivity extends SlidingFragmentActivity implements ActionBar.TabListener{
+public class MainActivity extends SlidingFragmentActivity {
 	
-
-	private static final boolean ACTIONBAR_LOGO = true;
-	private static final boolean ACTIONBAR_SCOLL = true;
-	private static final boolean ACTIONBAR_TITLE = true;
-	private static final boolean ACTIONBAR_HOME_BTN = true;
+	private long close_waittime = 2000;								//关闭程序确认延迟时间(毫秒)
+	private long close_touchtime = 0;
 	
 	private CanvasTransformer mTransformer;
 	private FragmentManager mFragmentManager = getSupportFragmentManager();
 	
-	//缓存 - 所有Fragment
+    
+	
+	//缓存所有Fragment
 	//TODO - 添加Fragment
 	private final MapFragment mMapFragment = new MapFragment();
 	private final HomeFragment mHomeFragment = new HomeFragment();
@@ -58,18 +49,35 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_content_frame);
-		setTitle("番职e家");						//设置 - 标题栏的标题
-		//initActionBar();						//初始化 - ActionBar
-		initAnimation();						//初始化 - 滑动动画
-		initSlidingMenu(savedInstanceState);	//初始化 - 滑动菜单
-		initFragment();							//初始化 - Fragment
+		
+		//设置标题栏的标题
+		setTitle("番职e家");
+
+		//设置ActionBar是否跟着滑动
+		setSlidingActionBarEnabled(false);
+
+		//设置是否显示ActionBar上的查看菜单按钮(<)
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+		//设置主界面视图
+		setContentView(R.layout.main_content_frame);	
+
+		//初始化滑动动画
+		initAnimation();
+		
+		//初始化滑动菜单
+		initSlidingMenu(savedInstanceState);
+		
+		//初始化Fragment
+		initFragment();
+		
 	}
 
 
+    
 	/**
 	 * 方法 initAnimation
-	 * 初始化 - 滑动动画
+	 * 初始化滑动动画
 	 */
 	private void initAnimation() {
 		mTransformer = new CanvasTransformer(){
@@ -86,9 +94,7 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 
 	
 	/**
-	 * 方法 initSlidingMenu
 	 * 初始化滑动菜单
-	 * @param savedInstanceState
 	 */
 	private void initSlidingMenu(Bundle savedInstanceState) {
 		// 设置滑动菜单的视图
@@ -121,10 +127,8 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 	}
 	
 	
-	/**
-	 * 字段 Interpolator ： interp
-	 * 动画3 - silde up
-	 */
+	
+	//动画3 - silde up
 	private static Interpolator interp = new Interpolator() {  
         @Override  
         public float getInterpolation(float t) {  
@@ -141,6 +145,7 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 	 * 2 : 边缘
 	 * 3 : 全禁止
 	 */
+	@SuppressWarnings("unused")
 	public void setTouchMode(int mode){
 		switch (mode) {
 		case 1:
@@ -156,12 +161,19 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 	}
 	
 	
-	
-
 	/**
-	 * 重写 onBackPressed
-	 * 实现返回键功能
+	 * 菜单按钮点击事件，通过点击ActionBar的Home图标按钮来打开滑动菜单
 	 */
+	@Override
+	public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			toggle();
+			return true;		
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
 	@Override
 	public void onBackPressed() {
 		//如果是在社团详情页面，就返回到社团列表页面
@@ -173,7 +185,15 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 		} else {
 			//如果菜单栏打开着
         	if(getSlidingMenu().isMenuShowing() || getSlidingMenu().isSecondaryMenuShowing()){
-        		//再按一次退出，废弃了
+//        		Log.i("qsuron", "菜单栏打开着");
+//        		long currentTime = System.currentTimeMillis();
+//    			if ((currentTime - close_touchtime) >= close_waittime) {
+//    				Toast.makeText(this, "再按一次退出程序?", Toast.LENGTH_SHORT).show();
+//    				close_touchtime = currentTime;
+//    			} else {
+//    				Log.i("qsuron", "返回键-退出程序 finish()");
+//    				finish();
+//    			}
         	}else{
         		Log.i("qsuron", "菜单栏关着");
         		getSlidingMenu().showMenu();
@@ -183,11 +203,9 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 		}
 	}
 	
-	
 	/********************************************************
-	 * 关于Fragment的所有代码，在下方！每次添加Fragment都要修改
+	 * 关于Fragment的所有代码，在下方！每加一个Fragment都要修改
 	 ********************************************************/
-	
 	
 	/**
 	 * 方法 initFragment
@@ -280,69 +298,11 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 		ft.show(mAssociationFragment);
 		ft.commit();
 	}
-
-
-	/*****************************************************
-	 *  ActionBar 相关
-	 *****************************************************/
 	
-    
-	/**
-	 * 方法 initActionBar
-	 * 初始化 - ActionBar
-	 */
-	private void initActionBar() {
-		//设置 - ActionBar是否跟着滑动
-		setSlidingActionBarEnabled(ACTIONBAR_SCOLL);
-		//设置 - 是否显示ActionBar上的查看菜单按钮(<)
-		getSupportActionBar().setDisplayHomeAsUpEnabled(ACTIONBAR_HOME_BTN);
-		//设置 - 是否显示ActionBar上的LOGO
-		getSupportActionBar().setDisplayUseLogoEnabled(ACTIONBAR_LOGO);
-		//设置 - 是否显示ActionBar上的标题
-		getSupportActionBar().setDisplayShowTitleEnabled(ACTIONBAR_TITLE);
-		//设置 - 是否显示ActionBar背景
-		//getSupportActionBar().setBackgroundDrawable(this.getResources().getDrawable(R.color.main_actionbar_bgcolor));
-	}
-	
-	
-	/**
-	 * 重写 onOptionsItemSelected
-	 * 菜单按钮点击事件，通过点击ActionBar的Home图标按钮来打开滑动菜单
-	 */
-	@Override
-	public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
-		switch (item.getItemId()) {
-        case android.R.id.home:
-        	toggle();
-            return false;
-        default:
-            return super.onOptionsItemSelected(item);
-        }
-	}
-	
-
-	    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
-	    }
-
-
-
-		@Override
-		public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-		}
-
-
-
-		@Override
-		public void onTabReselected(Tab tab, FragmentTransaction ft) {
-		}
-	    
-	    
-	/*****************************************************
-	 *  下面是一些 暂时没用到，可能会有用的代码段
-	 *****************************************************/
 	
 	
 	//隐藏键盘
 	//InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
 	//imm.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
+		
 }
