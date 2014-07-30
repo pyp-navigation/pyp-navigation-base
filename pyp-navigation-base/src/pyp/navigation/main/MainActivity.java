@@ -9,9 +9,12 @@ import pyp.navigation.main.menu.LeftMenuFragment;
 import pyp.navigation.main.menu.RightMenuFragment;
 import pyp.navigation.map.MapFragment;
 import pyp.navigation.setting.SettingFragment;
+import pyp.navigation.update.UpdateManager;
 import android.graphics.Canvas;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -38,7 +41,6 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
  */
 public class MainActivity extends SlidingFragmentActivity implements ActionBar.TabListener{
 	
-
 	private static final boolean ACTIONBAR_LOGO = true;
 	private static final boolean ACTIONBAR_SCOLL = true;
 	private static final boolean ACTIONBAR_TITLE = true;
@@ -54,6 +56,7 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 	private final SettingFragment mSettingFragment = new SettingFragment();
 	private final AssociationFragment mAssociationFragment = new AssociationFragment();
 	private final AssociationDetailFragment mAssociationDetailFragment = new AssociationDetailFragment();
+	private UpdateManager update;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -182,6 +185,52 @@ public class MainActivity extends SlidingFragmentActivity implements ActionBar.T
 			super.onBackPressed();
 		}
 	}
+	
+	
+	/**
+	 * 方法 check4update
+	 * 检查新版本
+	 */
+	public void check4update(){
+		update = new UpdateManager(this);
+		new Thread(updateRunnable).start();
+	}
+	
+	/**
+	 * 字段 Runnable ： updateRunnable
+	 * 线程 - 检查新版本
+	 * TODO
+	 * TODO
+	 * TODO
+	 * TODO
+	 */
+	private Runnable updateRunnable = new Runnable() {
+		@Override
+		public void run() {
+			Looper.prepare();
+			try {
+				update.checkUpdateInfo();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+			Message msg = new Message();         
+			Bundle data = new Bundle();         
+			data.putString("value","请求结果");         
+			msg.setData(data);         
+			handler.sendMessage(msg); 
+			Looper.loop();
+		}
+	};
+	
+	Handler handler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			super.handleMessage(msg);
+			Bundle data = msg.getData();
+			String val = data.getString("value");
+			Log.i("mylog", "请求结果-->" + val);
+		}
+	};
 	
 	
 	/********************************************************

@@ -34,7 +34,7 @@
         
     <string-array name="menu_right_item">
         <item>设置</item>
-        <item>测试</item>
+        <item>检查新版本</item>
     </string-array>
 
 </resources>
