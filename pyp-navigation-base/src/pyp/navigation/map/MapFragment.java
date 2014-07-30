@@ -1,12 +1,19 @@
 package pyp.navigation.map;
 
+
+
+
 import java.util.ArrayList;
 
 import pyp.navigation.R;
 import pyp.navigation.main.MainActivity;
+
+
 import pyp.navigation.map.bean.Marker;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.CornerPathEffect;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -37,7 +44,7 @@ import com.qozix.tileview.TileView;
  * @email 531724220@qq.com
  */
 public class MapFragment extends Fragment {
-	//test
+	
 	private MainActivity parentActivity;
 	
 	@Override
@@ -75,15 +82,21 @@ public class MapFragment extends Fragment {
     private View belowheaderline;
     private View belowhelpmefindline;
     
+    private Context local_context;
     
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    	initData();
         initViews(inflater, container);
         initListensers();
         return parentView;
     }
 
+	public void initData() {
+	}
 
+	
+	@SuppressLint("CutPasteId")
 	public void initViews(LayoutInflater inflater, ViewGroup container) {
 		
 	 	//初始化地图主界面
@@ -129,6 +142,8 @@ public class MapFragment extends Fragment {
 		Paint paint = tileView.getPathPaint();
 		paint.setShadowLayer( 4, 2, 2, 0x66000000 );
 		paint.setPathEffect( new CornerPathEffect( 5 ) );
+		
+		this.local_context = this.getActivity();
 	}
 
 	/**
@@ -188,6 +203,7 @@ public class MapFragment extends Fragment {
 		return null;
 	}
 	
+
 	public void initListensers() {
 		this.map_searchBtn.setOnClickListener(searchBtn_OnClickListener);
 		this.map_busBtn.setOnClickListener(busBtn_OnClickListener);
@@ -275,7 +291,8 @@ public class MapFragment extends Fragment {
 
 		@Override
 		public void onClick(View v) {
-			Toast.makeText(getActivity(), "打开百度地图！！！", Toast.LENGTH_LONG).show();
+			Intent intent = new Intent(local_context, BaiduMapActivity.class);
+			startActivity(intent);
 		}
 		
 	};
