@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dip"
+    android:orientation="horizontal" >
+
+    <!-- 第几节课开始至第几节课结束 -->
+
+    <TextView
+        android:id="@+id/schedule_listitem_cursor_class"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="3-5"
+        android:textColor="#ff0000" />
+    <!-- 课程名 -->
+
+    <TextView
+        android:id="@+id/schedule_listitem_cursor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="大型数据库" />
+
+    <!-- 上课地点 -->
+
+    <TextView
+        android:id="@+id/schedule_listitem_cursor_location"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="7D305" />
+
+    <!-- 教师名 -->
+
+    <TextView
+        android:id="@+id/schedule_listitem_cursor_teachername"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="杨鹏" />
+
+    <!-- 备忘录 -->
+
+    <TextView
+        android:id="@+id/schedule_listitem_cursor_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="备忘录" />
+
+</LinearLayout>

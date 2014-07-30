@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/association_mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/association_main"
+    android:orientation="vertical" >
+
+    <!-- 标题头，包含月份周数、选项卡组件、水平布局 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- 月份/周数 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <!-- 月份 -->
+
+            <TextView
+                android:id="@+id/schedule_main_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7月" />
+            <!-- 月份和周数间的分割线 -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#0000ff" />
+
+            <!-- 周数 -->
+
+            <TextView
+                android:id="@+id/schedule_main_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12周" />
+        </LinearLayout>
+		<!-- 选项卡组件 -->
+        <pyp.navigation.schedule.TitleIndicator
+            android:id="@+id/schedule_main_pagerindicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/association_search_top_tab"
+            app:footerColor="@color/tab_indicator_text_selected"
+            app:footerLineHeight="2dp"
+            app:footerTriangleHeight="3.0dp"
+            app:textSizeNormal="@dimen/common_text_size_middle_2"
+            app:textSizeSelected="@dimen/common_text_size_middle" />
+    </LinearLayout>
+	<!-- 选项卡下对应的page -->
+    <pyp.navigation.schedule.ViewPagerCompat
+        android:id="@+id/schedule_main_page"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:duplicateParentState="true" />
+
+</LinearLayout>
