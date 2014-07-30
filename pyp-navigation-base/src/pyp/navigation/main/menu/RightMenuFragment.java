@@ -4,8 +4,10 @@ import pyp.navigation.R;
 import pyp.navigation.home.HomeFragment;
 import pyp.navigation.main.MainActivity;
 import pyp.navigation.setting.SettingFragment;
+import pyp.navigation.update.UpdateManager;
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -19,6 +21,7 @@ import android.widget.Toast;
 public class RightMenuFragment extends ListFragment {
 
 	private MainActivity parentActivity;
+	private UpdateManager update;
 	
 	@Override
 	public void onAttach(Activity activity) {
@@ -52,12 +55,13 @@ public class RightMenuFragment extends ListFragment {
 			parentActivity.changeFragment(SettingFragment.class.getName());
 			break;
 		case 1:
-			Log.i("qsuron", "测试");
-			Toast.makeText(this.getActivity(), "测试按钮", Toast.LENGTH_SHORT).show();
+			Log.i("qsuron", "检查新版本");
+			parentActivity.check4update();
 			break;
 		default:
 			Log.i("qsuron", "default");
 		}
 	}
+	
 
 }
