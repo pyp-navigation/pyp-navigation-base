@@ -117,5 +117,92 @@
     <style name="styleName">
         <item name="android:contentDescription">@string/home_under_descript</item>
     </style>
+    
+   	<!-- 社团助手 -->
+    <style name="new_default_bg">
+        <item name="android:id">@id/xp_bg</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">320.0dip</item>
+        <item name="android:src">@drawable/association_fragment_three_grzxxp_02</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    
+    <style name="wrapper">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    
+    <style name="new_default_filter_pop_line">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">#ffc9cfd4</item>
+        <item name="android:paddingBottom">1.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:baselineAligned">true</item>
+    </style>
+    
+    <style name="new_default_filter_pop_rela">
+        <item name="android:background">#ffededed</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">1.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    
+    <style name="new_default_filter_pop_text">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    
+    <style name="new_default_filter_pop_jiao">
+        <item name="android:background">@drawable/association_fragment_three_xpjt</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+        <item name="android:layout_marginBottom">3.0dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    
+    <style name="body">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_below">@id/list_header</item>
+    </style>
+    
+    <style name="list">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0.0dip</item>
+        <item name="android:fastScrollEnabled">true</item>
+    </style>
+    
+    <style name="full">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    
+    
+    
+    
 
 </resources>
+
+
+
+
+
+
+
+
+
+

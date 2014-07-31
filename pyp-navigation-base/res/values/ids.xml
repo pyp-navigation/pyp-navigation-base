@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mingxiao_lv" type="id"/>
+    <item name="loading" type="id" />
+    <item name="default_top" type="id" />
+    <item name="list_header" type="id" />
+    <item name="filter_util" type="id" />
+    <item name="rela_00" type="id" />
+    <item name="city" type="id" />
+    <item name="rela_01" type="id" />
+    <item name="school" type="id" />
+    <item name="rela_02" type="id" />
+    <item name="range" type="id" />
+    <item name="rela_03" type="id" />
+    <item name="flag" type="id" />
+    <item name="nodata" type="id" />
+    <item name="data_kong" type="id" />
+    <item name="kong_text" type="id" />
+    <item name="defaultloading" type="id" />
+    <item name="rela_loading" type="id" />
+    <item name="loding_pb_loadingbar" type="id" />
+    <item name="tv_content" type="id" />
+    <item name="xp_bg" type="id" />
+</resources>
