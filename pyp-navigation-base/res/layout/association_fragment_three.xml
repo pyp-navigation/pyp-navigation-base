@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView style="@style/new_default_bg" />
+
+    <RelativeLayout style="@style/wrapper" >
+
+        <!-- 
+        <include
+            android:id="@id/default_top"
+            android:layout_width="fill_parent"
+            layout="@layout/association_fragment_three_top" />
+ 		-->
+ 		
+        <RelativeLayout
+            android:id="@id/list_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/default_top" >
+
+            <LinearLayout
+                android:id="@id/filter_util"
+                style="@style/new_default_filter_pop_line" >
+
+                <RelativeLayout
+                    android:id="@id/rela_00"
+                    style="@style/new_default_filter_pop_rela" >
+
+                    <TextView
+                        android:id="@id/city"
+                        style="@style/new_default_filter_pop_text"
+                        android:text="城市" />
+
+                    <TextView
+                        style="@style/new_default_filter_pop_jiao"
+                        android:layout_alignBottom="@id/city" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/rela_01"
+                    style="@style/new_default_filter_pop_rela" >
+
+                    <TextView
+                        android:id="@id/school"
+                        style="@style/new_default_filter_pop_text"
+                        android:text="学校" />
+
+                    <TextView
+                        style="@style/new_default_filter_pop_jiao"
+                        android:layout_alignBottom="@id/school" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/rela_02"
+                    style="@style/new_default_filter_pop_rela" >
+
+                    <TextView
+                        android:id="@id/range"
+                        style="@style/new_default_filter_pop_text"
+                        android:text="@string/filter_type" />
+
+                    <TextView
+                        style="@style/new_default_filter_pop_jiao"
+                        android:layout_alignBottom="@id/range" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/rela_03"
+                    style="@style/new_default_filter_pop_rela" >
+
+                    <TextView
+                        android:id="@id/flag"
+                        style="@style/new_default_filter_pop_text"
+                        android:text="时间" />
+
+                    <TextView
+                        style="@style/new_default_filter_pop_jiao"
+                        android:layout_alignBottom="@id/flag" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/body"
+            android:background="#ffffffff" >
+
+            <pyp.navigation.association.three.ActivityListView
+                android:id="@id/mingxiao_lv"
+                style="@style/list"
+                android:paddingBottom="1.0dip" />
+
+            <RelativeLayout
+                android:id="@id/loading"
+                style="@style/full" >
+
+                <include layout="@layout/association_fragment_three_loading" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/nodata"
+                style="@style/full"
+                android:visibility="gone" >
+
+                <include layout="@layout/association_fragment_three_kong" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

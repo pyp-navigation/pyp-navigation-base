@@ -45,10 +45,25 @@
     <string name="main_slidingmenu_head_text">登录/注册</string>
     <string name="main_slidingmenu_bottom_exit_text">退出程序</string>
     
+    <!-- 社团助手 -->
+    <string name="filter_type">类型</string>
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
 </resources>
+
+
+
+
+
 
 
 
